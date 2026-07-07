@@ -1,0 +1,11 @@
+# Source files (compiled output in dist/ is published instead)
+*.js
+!dist/**/*.js
+
+# Config and tooling
+babel.config.json
+.babelrc
+
+# Development artefacts
+examples/
+node_modules/

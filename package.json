@@ -1,0 +1,41 @@
+{
+  "name": "@quicore/tracelet",
+  "version": "0.1.0",
+  "description": "A lightweight, dependency-free execution context for Node.js that bundles lifecycle tracking, distributed-trace propagation, business metrics, and I/O performance stats into a single self-instrumenting object — then serializes the whole thing to a structured snapshot or a flat log line.",
+  "main": "./dist/tracelet.js",
+  "exports": {
+    ".": {
+      "require": "./dist/tracelet.js",
+      "default": "./dist/tracelet.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "prepublishOnly": "npm run build",
+    "test": "node --test test/*.mjs"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.6",
+    "@babel/preset-env": "^7.25.6"
+  },
+  "keywords": [
+    "tracelet",
+    "tracing",
+    "observability",
+    "metrics",
+    "context",
+    "distributed-tracing",
+    "performance",
+    "telemetry"
+  ],
+  "license": "MIT"
+}
